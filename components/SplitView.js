@@ -42,6 +42,7 @@ const ParticipantList = ({ courseId, rightPaneWidth }) => {
       data={courseParticipants}
       keyExtractor={(item) => item}
       numColumns={numColumns}
+      key={numColumns.toString()} // Hinzufügen eines Schlüssels, um eine Neudarstellung zu erzwingen, wenn sich numColumns ändert
       renderItem={({ item }) => (
         <View style={[styles.tile, { width: tileSize, height: tileSize }]}>
           <Text style={styles.tileText}>{item}</Text>
